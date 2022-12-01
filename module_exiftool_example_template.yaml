@@ -1,0 +1,69 @@
+# Example template for demonstrating the ExifTool handler software available
+# from https://github.com/dahooper/exiftool-handler
+#
+# Note that this example has been designed to demonstrate different aspects
+# of a template file rather than to embed useful metadata. 
+#
+# Each file requires a "template_id" entry
+#
+- template_id: module_exiftool_example_template
+#
+- XMP-photoshop:Headline: This is a short value, which can fit on one line.
+#
+# The following entry contains substitution fields for string and float
+# values.
+#
+- XMP-dc:Description: |
+    This is a longer value, which not only extends beyond the length of
+    one line, but extends to more than one paragraph. Here's an
+    example of how to substitute the word {string_substitution} into the
+    text. An entry for "string_substitution" will be required in the
+    substitutions dictionary.
+      There is no need to include a format specification within a
+    substitution field if the default formatting achieves the desired
+    result. This is likely to be the case for string and integer
+    substitution values. In the case of floating point values, the
+    default formatting will include as many decimal places as are
+    required to represent the number without a loss of precision, e.g.
+    {float_substitution}. However, a format specification can added if
+    you would prefer fewer decimal places, e.g. {float_substitution:.2f}.
+#
+# The following entry
+#   a) makes use of the "global" substitution value __utcnow__
+#   b) must be enclosed within inverted commas since it begins with a "{"
+#
+- XMP-xmp:CreateDate: "{__utcnow__:%Y:%m:%d %H:%M:%S}"
+#
+# The following entry
+#   a) makes use of the "global" substitution value __utcnowstr__, which
+#      does not need a format specification
+#   b) must be enclosed within inverted commas since it begins with a "{"
+#
+- XMP-dc:Date: "{__utcnowstr__}"
+#
+# The values of the following fields must also be enclosed within inverted
+# commas to ensure that they are interpreted as string types
+#
+- XMP-iptcExt:LocationShownGPSAltitude: "48"
+
+- XMP-iptcExt:LocationShownGPSLatitude: "52.424500"
+
+- XMP-iptcExt:LocationShownGPSLongitude: "-4.005467"
+#
+# Multiple values can be assigned to list tags in two ways. The first requires
+# each value to be on a separate line, to be indented more than tag name, and
+# to preceded with a dash and a single space "- ".
+#
+- XMP-dc:Creator: 
+  - Hooper, David A.
+  - Brooks, Barbara J.
+  - Garland, Wendy E.
+  - Parton, Graham A.
+#
+# The second way to assign multiple values to a list tag is to enclose them
+# within square brackets and to separate them from each other by a comma
+# followed by a space. This syntax should only be used if all of the values
+# can fit on one line.
+#
+- XMP-dc:Subject: [Apples, Bananas, Cherries, Damsons]
+

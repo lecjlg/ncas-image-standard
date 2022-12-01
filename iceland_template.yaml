@@ -1,0 +1,80 @@
+# This template file is intended to be used:
+#
+# - with the ExifTool handler software available from 
+#   https://github.com/dahooper/exiftool-handler
+#
+# - for version 1.0 of the NCAS-IMAGE metadata standard as applied
+#   to a photograph
+#
+# Any pre-populated fields should be left as is. All other fields must
+# be populated in accordance with both the syntax expected by the
+# ExifTool handler software and the NCAS-IMAGE metadata standard
+#
+- template_id: icelandphotos
+#
+#
+# Version of the standard being followed
+#
+- XMP-photoshop:Instructions: |
+    Metadata follow the National Centre for Atmospheric Science Image
+    Metadata Standard v1.0: https://doi.org/10.5281/zenodo.6368295
+#
+#
+# Description of what is shown in the image
+#
+- XMP-photoshop:Headline: Photos taken at 1 minute intervals at the Iceland Atmospheric Observatory
+#
+- XMP-dc:Description: This photo was taken by the upward facing sky cam which is located at the top of the mast at the front of the trailer. The camera is a planet vision camera and is a fish eye lens designed to capture a full sky image.
+#
+## Location of an instrument or data grid point
+#
+- XMP-iptcExt:LocationShownLocationName: Hotel Laki, Kirkjubæjarklaustur, Iceland
+#
+- XMP-iptcExt:LocationShownGPSAltitude: 60 m
+# 
+- XMP-iptcExt:LocationShownGPSLatitude: "+63.773922"
+#
+- XMP-iptcExt:LocationShownGPSLongitude: "-17.959458"
+#
+#
+# Date-time details (note that XMP-xmp:MetadataDate will be populated
+# automatically by the ExifTool handler software)
+#
+- XMP-xmp:CreateDate: "20221128102800" 
+#
+#
+# Licensing and Acknowledgement details 
+#
+- XMP-dc:Rights: |
+    Use of this image is covered by the (UK) Open Government Licence,
+    http://www.nationalarchives.gov.uk/doc/open-government-licence/ .
+
+- XMP-xmpRights:WebStatement: |
+    http://www.nationalarchives.gov.uk/doc/open-government-licence/
+
+- XMP-photoshop:Credit: National Centre for Atmospheric Science (NCAS)
+#
+#
+# Source of the image 
+#
+- XMP-dc:Title: IAO (Iceland atmospheric Observator
+
+- XMP-dc:Relation: https://catalogue.ceda.ac.uk
+#
+#
+# Instrument Scientist’s Details
+#
+- XMP-dc:Creator: James Groves
+
+- XMP-iptcCore:CreatorWorkEmail: james.groves@ncas.ac.uk
+
+- XMP-iptcExt:CreatorIdentifier: https://orcid.org/0000-0002-7073-2085
+#
+#
+# Principal Investigator’s Details
+#
+- XMP-iptcExt:ContributorName: Dr Barbara Brooks
+
+- XMP-iptcExt:ContributorIdentifier: https://orcid.org/0000-0001-8932-9256 
+
+- XMP-iptcExt:ContributorRole: Project Principal Investigator
