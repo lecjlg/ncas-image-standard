@@ -15,5 +15,5 @@ files = sys.argv[1]
 for f in files:
     print ("files")
     #exit_code = handler.embed_from_template(template_id,{},"files")
-#exit_code = handler.embed_from_template(template_id,{},"/data/ncas-cam-3/images/20221130/10/20221130105300-ncas-cam-3.jpg")
+#exit_code = handler.embed_from_template(template_id,{},"testimage.jpg")
 
